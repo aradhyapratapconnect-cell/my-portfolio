@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# SPA fallback (no client-side routing is used, but this keeps
+# deep links / refreshes working safely on the static host).
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
