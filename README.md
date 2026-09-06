@@ -57,6 +57,18 @@ The build output is fully static and uses relative asset paths, so the
 npm run build
 ```
 
+## Favicon / logo
+
+The provided logo lives at `assets/favicon.png` (source of truth). Favicon
+sizes, the multi-size `favicon.ico`, the Apple touch icon and
+`site.webmanifest` are generated into `public/` with:
+
+```bash
+npm run icons
+```
+
+Re-run this after replacing `assets/favicon.png`.
+
 ## Notes
 
 - Print / "Save as PDF" is supported: navigation and interactive controls

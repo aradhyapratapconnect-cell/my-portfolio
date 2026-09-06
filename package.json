@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "icons": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/generate-favicons.ps1"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.5",
