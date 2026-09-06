@@ -12,7 +12,8 @@ export interface Project {
   githubUrl?: string;
   /** Learning / application note tied to the project. */
   note: string;
-  icon: LucideIcon;
+  /** Project logo image (bundled asset URL). */
+  icon: string;
 }
 
 export interface SkillCategory {

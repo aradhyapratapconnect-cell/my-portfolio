@@ -1,4 +1,3 @@
-import { Github } from "lucide-react";
 import type { Project } from "../../types";
 import { cn } from "../../lib/cn";
 import { Badge } from "../ui/Badge";
@@ -12,7 +11,6 @@ interface ProjectCardProps {
 
 /** Premium product-style project card with hover elevation. */
 export function ProjectCard({ project }: ProjectCardProps) {
-  const Icon = project.icon;
   const developing = project.status === "developing";
 
   return (
@@ -20,9 +18,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="flex items-start justify-between gap-4">
         <span
           aria-hidden="true"
-          className="grid h-11 w-11 place-items-center rounded-xl border border-line bg-surface-subtle text-ink transition-colors duration-300 group-hover:border-accent/30 group-hover:text-accent"
+          className="grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-xl border border-line bg-surface-subtle transition-colors duration-300 group-hover:border-accent/30"
         >
-          <Icon size={20} strokeWidth={1.8} />
+          <img src={project.icon} alt="" className="h-full w-full object-cover object-top" />
         </span>
         <Badge variant={developing ? "warning" : "success"} dot>
           {developing ? "Developing" : "Completed"}
@@ -60,15 +58,5 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
     </Card>
-  );
-}
-
-/** Small inline GitHub link used where a repository exists. */
-export function ProjectGithubLink({ href, label }: { href: string; label?: string }) {
-  return (
-    <ExternalLink href={href} withIcon aria-label={`${label ?? "View on GitHub"} (opens in a new tab)`}>
-      <Github size={14} aria-hidden="true" />
-      {label ?? "View on GitHub"}
-    </ExternalLink>
   );
 }

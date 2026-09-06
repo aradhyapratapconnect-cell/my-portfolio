@@ -1,5 +1,7 @@
-import { Bot, Clock, Repeat } from "lucide-react";
 import type { Project } from "../types";
+import clockeIcon from "../../assets/clocke.jpg";
+import habiterIcon from "../../assets/habiter.jpg";
+import kyceliusIcon from "../../assets/kyclius.jpg";
 
 /**
  * Exactly three projects. Clocke deliberately has no githubUrl (repository
@@ -15,8 +17,9 @@ export const PROJECTS: Project[] = [
     description:
       "A productivity and time-awareness application designed to help make time more productive and work more efficiently.",
     technologies: ["HTML", "CSS", "JavaScript"],
+    githubUrl: "https://github.com/aradhyapratapconnect-cell/Clocke",
     note: "Currently being developed — practising core web fundamentals while exploring how interfaces can encourage focused, efficient work.",
-    icon: Clock,
+    icon: clockeIcon,
   },
   {
     id: "habiter",
@@ -27,7 +30,7 @@ export const PROJECTS: Project[] = [
     technologies: ["TypeScript", "Electron", "CSS"],
     githubUrl: "https://github.com/aradhyapratapconnect-cell/Habiter",
     note: "Completed — the first desktop application, applying components, state and desktop packaging to a real product idea.",
-    icon: Repeat,
+    icon: habiterIcon,
   },
   {
     id: "kycelius",
@@ -36,7 +39,8 @@ export const PROJECTS: Project[] = [
     description:
       "An autonomous AI agent in development, designed to help users by creating files, projects and performing useful computer-based tasks.",
     technologies: ["TypeScript", "React", "Electron", "Tailwind CSS"],
+    githubUrl: "https://github.com/aradhyapratapconnect-cell/Kycelius",
     note: "Currently being developed — exploring how agents and tools can work together to automate meaningful tasks.",
-    icon: Bot,
+    icon: kyceliusIcon,
   },
 ];

@@ -67,7 +67,15 @@ sizes, the multi-size `favicon.ico`, the Apple touch icon and
 npm run icons
 ```
 
-Re-run this after replacing `assets/favicon.png`.
+The project-card logos (`clocke.jpg`, `habiter.jpg`, `kyclius.jpg`) live in
+`assets/`. Their transparent 128x128 icons are generated into `src/assets/`
+with:
+
+```bash
+npm run icons:projects
+```
+
+Re-run either command after replacing the source images.
 
 ## Notes
 
