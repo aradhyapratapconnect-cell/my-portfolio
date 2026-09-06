@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Code2, Github, Menu } from "lucide-react";
+import { Github, Menu } from "lucide-react";
 import { LINKS } from "../../data/links";
 import { NAV_ITEMS, SECTION_IDS } from "../../data/navigation";
 import { useActiveSection } from "../../hooks/useActiveSection";
@@ -7,6 +7,7 @@ import { useScrollProgress } from "../../hooks/useScrollProgress";
 import { cn } from "../../lib/cn";
 import { Button } from "../ui/Button";
 import { Container } from "../ui/Container";
+import apsLogo from "../../assets/aps-logo.png";
 
 interface NavbarProps {
   onOpenMenu: () => void;
@@ -44,9 +45,9 @@ export function Navbar({ onOpenMenu }: NavbarProps) {
         <a href="#home" className="group flex items-center gap-2.5" aria-label="Aradhya Pratap Singh — back to top">
           <span
             aria-hidden="true"
-            className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-ink text-white transition-transform duration-200 group-hover:-translate-y-0.5"
+            className="grid h-8 w-8 shrink-0 place-items-center overflow-hidden rounded-lg bg-ink text-white transition-transform duration-200 group-hover:-translate-y-0.5"
           >
-            <Code2 size={16} strokeWidth={2.4} />
+            <img src={apsLogo} alt="" className="h-full w-full object-contain" />
           </span>
           <span className="hidden text-[15px] font-semibold tracking-tight text-ink sm:inline">
             Aradhya <span className="font-normal text-ink-muted">Pratap Singh</span>

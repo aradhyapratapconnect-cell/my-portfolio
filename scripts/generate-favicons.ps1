@@ -116,6 +116,14 @@ try {
   $json = $manifest | ConvertTo-Json -Depth 4
   [System.IO.File]::WriteAllText((Join-Path $outDir "site.webmanifest"), $json, (New-Object System.Text.UTF8Encoding($false)))
   Write-Host "wrote site.webmanifest"
+
+  # Navbar brand mark: square crop bundled through Vite (src/assets)
+  $assetDir = Join-Path $root "src\assets"
+  New-Item -ItemType Directory -Force -Path $assetDir | Out-Null
+  $brand = New-SizedBitmap 128
+  $brand.Save((Join-Path $assetDir "aps-logo.png"), [System.Drawing.Imaging.ImageFormat]::Png)
+  $brand.Dispose()
+  Write-Host "wrote src\assets\aps-logo.png"
 }
 finally {
   $src.Dispose()

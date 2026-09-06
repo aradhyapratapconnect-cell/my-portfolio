@@ -1,11 +1,12 @@
 import { useEffect, useRef } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-import { ArrowUpRight, Code2, X } from "lucide-react";
+import { ArrowUpRight, X } from "lucide-react";
 import { LINKS } from "../../data/links";
 import { NAV_ITEMS } from "../../data/navigation";
 import { useLockBodyScroll } from "../../hooks/useLockBodyScroll";
 import { cn } from "../../lib/cn";
 import { Button } from "../ui/Button";
+import apsLogo from "../../assets/aps-logo.png";
 
 const FOCUSABLE =
   'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
@@ -93,9 +94,9 @@ export function MobileDrawer({ open, onClose }: MobileDrawerProps) {
               <span className="flex items-center gap-2.5">
                 <span
                   aria-hidden="true"
-                  className="grid h-8 w-8 place-items-center rounded-lg bg-ink text-white"
+                  className="grid h-8 w-8 place-items-center overflow-hidden rounded-lg bg-ink text-white"
                 >
-                  <Code2 size={16} strokeWidth={2.4} />
+                  <img src={apsLogo} alt="" className="h-full w-full object-contain" />
                 </span>
                 <span className="text-[15px] font-semibold tracking-tight text-ink">
                   Aradhya Pratap Singh
